@@ -5,7 +5,7 @@
 double  r=.2,s=.3;  
 int i;
 float  tx=10,bx=10;
-int x=0,y=0;
+
 
 void init()
 {
@@ -217,53 +217,81 @@ void display()
     glRecti(123,29,127,20);
     glColor3ub(139,69,19);//saddle brown
     glRecti(118,22,132,14);
+// --------------------------------------- HOUSE one----------------------------
+    glBegin(GL_POLYGON);  // first Part
+        glColor3ub(128,0,0);//gray
+        glVertex2i(-58,115);
+        glVertex2i(-75,145);
+        glVertex2i(-115,150);//point
+        glVertex2i(-90,100);
+        glVertex2i(-62,100);
+        glVertex2i(-58,115);
+        
+    glEnd();
+    glBegin(GL_POLYGON);  // second Part
+        glColor3ub(120,0,0);//maroon   
+        glVertex2i(-115,150);
+        glVertex2i(-130,100);
+        glVertex2i(-120,100);//point
+        glVertex2i(-108,137);//point
+        glVertex2i(-115,150);  
+    glEnd();
+    glBegin(GL_POLYGON);  // third Part
+        glColor3ub(46,139,87);//
+        glVertex2i(-108,137);
+        glVertex2i(-120,100);
+        glVertex2i(-120,45);
+        glVertex2i(-90,40);//point
+        glVertex2i(-90,100);
+        glVertex2i(-108,137);
+    glEnd();
+    glBegin(GL_POLYGON);  // fourth Part
+        glColor3ub(143,188,143);//
+        glVertex2i(-90,40);
+        glVertex2i(-60,45);
+        glVertex2i(-60,100);
+        glVertex2i(-90,100);
+        
+    glEnd();
+    glColor3ub(120,0,0);//maroon // Door One
+        glRecti(-75,80,-65,43);
+    glColor3ub(120,0,0);//maroon // Door One
+        glRecti(-110,90,-100,70);
 
 
 
-//-------------------------------------------HOUSE-------------------------------------------------
+
+//-------------------------------------------  HOUSE  two  -------------------------------------------------
     glBegin(GL_POLYGON);  // First part
 
-        glColor3ub(218,165,32);//golden rod
+        glColor3ub(25,25,112);//midnight blue
         glVertex2i(-50,140);
         glVertex2i(0,149);
         glVertex2i(-12,88);
         glVertex2i(-65,89);
         glVertex2i(-50,140);
     glEnd();
-    glBegin(GL_LINE_STRIP);  // First part
-
-        glColor3ub(128,128,128);//gray
-        glVertex2i(-50,140);
-        glVertex2i(0,149);
-        glVertex2i(-12,88);
-        glVertex2i(-65,89);
-        glVertex2i(-50,140);
-    glEnd();
+    
     
     
     
 
     glBegin(GL_POLYGON);  // Second Part
-    glColor3f(0.6f, 0.4f, 0.5f);//Violet
+    glColor3ub(70,130,180);//midnight blue
         glVertex2i(-60,90);
         glVertex2i(-60,30);
         glVertex2i(-10,25);
         glVertex2i(-10,95);
     glEnd();
-     glBegin(GL_LINE_STRIP);  // Second Part
-     glColor3ub(128,128,128);//gray
-        glVertex2i(-60,90);
-        glVertex2i(-60,30);
-        glVertex2i(-10,25);
-        glVertex2i(-10,95);
-    glEnd();
+     
+
 //---------------------------------------Door------------------------------------------
-    glColor3ub(184,134,11);//dark golden rod 
+    glColor3ub(25,25,112);//midnight blue
     glRecti(-45,70,-30,28);
 
 //--------------------------------------------------------------------------
     glBegin(GL_POLYGON);   // Third part 
-    glColor3f(0.5f, 0.5f, 0.5f);//Violet
+    glColor3ub(95,158,160);//midnight blue
         glVertex2i(-10,25);
         glVertex2i(18,35);
         glVertex2i(18,100);
@@ -272,18 +300,9 @@ void display()
         glVertex2i(-10,25);
         
     glEnd();
-    glBegin(GL_LINE_STRIP);  // Third part 
-    glColor3ub(128,128,128);//gray
-        glVertex2i(-10,25);
-        glVertex2i(18,35);
-        glVertex2i(18,100);
-        glVertex2i(0,148);
-        glVertex2i(-10,100);
-        glVertex2i(-10,25);
-        
-    glEnd();
+   
     glBegin(GL_POLYGON); 
-    glColor3ub(218,165,32);//golden rod
+    glColor3ub(25,25,112);//midnight blue
         glVertex2i(-1,150);
         glVertex2i(20,100);
         glVertex2i(17,90);
@@ -291,18 +310,10 @@ void display()
         glVertex2i(-1,150);
 
     glEnd();
-    glBegin(GL_LINE_STRIP);
-    glColor3ub(105,105,105);//gray
-        glVertex2i(-1,150);
-        glVertex2i(20,100);
-        glVertex2i(17,90);
-        glVertex2i(-3,135);
-        
-
-    glEnd();
+    
     
     glBegin(GL_POLYGON);  // door
-    glColor3ub(184,134,11);//dark golden rod 
+    glColor3ub(25,25,112);//midnight blue
         glVertex2i(0,70);
         glVertex2i(10,73);
         glVertex2i(10,32);
@@ -318,6 +329,7 @@ void display()
         glColor3ub(30,144,255);
         glVertex2i(-200,-50);
         glVertex2i(200,-30);
+        glColor3ub(0,0,128);
         glVertex2i(200,-200);
         glVertex2i(-200,-200);
         glVertex2i(-200,-50);   
@@ -415,7 +427,7 @@ void display()
     glEnd();
 
     glColor3ub(139,69,19);
-    glRecti(-88,80,-86,-100);
+    glRecti(-88,80,-86,-100);  // Boat stand
     glBegin(GL_POLYGON);
         glColor3f(0.55,0.27,0.0745);//wood color
         glVertex2i(-85,-100);
