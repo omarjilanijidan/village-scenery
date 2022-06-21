@@ -125,14 +125,68 @@ void display()
     
     
 //-------------------------------------TREE------------------------
-    glColor3ub(218,165,32);
+    glColor3ub(139,69,19);//
     glRecti(-20,200,-13,140);
-    glColor3ub(124,252,0);
+    glColor3ub(0,100,0);
     sun(-30,190);
     sun(0,190);
     sun(-10,210);
     sun(-30,175);
     sun(-0,170);
+    glBegin(GL_POLYGON); // Main Tree // first part
+        glColor3ub(139,69,19);//
+        glVertex2i(-170,160);
+        glVertex2i(-168,120);
+        glColor3ub(139,69,19);//
+        glVertex2i(-178,40);
+        glVertex2i(-145,40);
+        glColor3ub(139,69,19);//
+        glVertex2i(-153,120);
+        glVertex2i(-150,160);
+        glVertex2i(-170,160);   
+    glEnd();
+    glBegin(GL_POLYGON);  // Main Tree // second part
+        glColor3ub(139,69,19);//
+        glVertex2i(-153,100);
+        glVertex2i(-100,200); 
+        glVertex2i(-95,200); 
+        glVertex2i(-153,80);
+        glVertex2i(-153,100); 
+    glEnd();
+    glBegin(GL_POLYGON);  // Main Tree // third part
+        glColor3ub(139,69,19);//
+        glVertex2i(-170,160);
+        glVertex2i(-185,210);
+        glVertex2i(-190,210);
+        glVertex2i(-168,90);
+        glVertex2i(-170,160);
+        
+    glEnd();
+    glBegin(GL_POLYGON);  // Main Tree // fourth part
+        glColor3ub(139,69,19);//
+        glVertex2i(-160,160);
+        glVertex2i(-150,210);
+        glVertex2i(-140,210);
+        glVertex2i(-150,160);
+        glVertex2i(-160,160);
+        
+        
+    glEnd();
+    glColor3ub(0,128,0);//leaf
+        sun(-95,200);
+        sun(-80,180);
+        sun(-110,180);
+        sun(-120,200);
+
+        sun(-150,200);
+        sun(-130,180);
+        sun(-125,220);
+        sun(-140,230);
+
+        sun(-190,210);
+        sun(-180,200);
+        sun(-175,225);
+        sun(-195,190);
 
 //-----------------------------------------------TUBEWELL-----------------------------------------
     
